@@ -34,7 +34,7 @@ class ServiceModel {
     static let errorRealm = "GDAHTTPErrorRealm"
     
     /// Domain part of the URL for learning resources
-    private static let productionAssestsHostName = "https://soundscape.services"
+    private static let productionAssestsHostName = "http://localhost:8001"
     // Do not change `productionVoicesHostName`!
     private static let productionVoicesHostName = "https://yourstaticblobstore"
     

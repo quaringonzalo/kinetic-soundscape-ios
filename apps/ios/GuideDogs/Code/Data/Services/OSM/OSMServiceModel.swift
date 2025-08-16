@@ -27,7 +27,10 @@ class OSMServiceModel: OSMServiceModelProtocol {
     /// Path to the tile server
     private static let path = "/tiles"
     
-    func getTileDataWithQueue(tile: VectorTile, categories: SuperCategories, queue: DispatchQueue, callback: @escaping OSMServiceModelProtocol.TileDataLookupCallback) {
+    func getTileDataWithQueue(tile: VectorTile,
+                              categories: SuperCategories,
+                              queue: DispatchQueue,
+                              callback: @escaping OSMServiceModelProtocol.TileDataLookupCallback) {
         let url = URL(string: "\(SettingsContext.shared.servicesHostName)\(OSMServiceModel.path)/\(tile.zoom)/\(tile.x)/\(tile.y).json")!
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: ServiceModel.requestTimeout)
         

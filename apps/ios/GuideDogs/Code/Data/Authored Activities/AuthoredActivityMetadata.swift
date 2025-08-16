@@ -47,19 +47,25 @@ struct AuthoredActivityMetadata: Codable, CustomStringConvertible {
     /// Builds the remote server path that the content can be downloaded from
     /// E.G. https://share.soundscape.services/experiences/<id>/activity.gpx
     var downloadPath: URL? {
-    var components = URLComponents()
+        var components = URLComponents()
         
         switch linkVersion {
         case .v2, .v3:
-            components.scheme = "https"
-            components.host = "share.soundscape.services"
-            components.path = "/activities/\(id)/activity.gpx"
+            components.scheme = "http"
+            components.host = "localhost"
+            components.port = 8001
+            components.path = "/activities/\(id.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? id)/activity.gpx"
         default:
             // no other versions currently supported
             break
         }
         
-        return components.url
+        guard let url = components.url else {
+            print("Failed to create URL with components: \(components)")
+            return nil
+        }
+        
+        return url
     }
     
     init(id: String, linkVersion: UniversalLinkVersion, etag: String? = nil, contentEtags: [String: String] = [:], selected: Bool = false) {

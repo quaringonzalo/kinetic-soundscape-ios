@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxsc="https://microsoft.com/Soundscape" xmlns:gpxtpx="https://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="https://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Microsoft Soundscape Authoring Tool">
+  <metadata>
+    <name>Nombre de prueba</name>
+    <desc>Descripción de prueba</desc>
+    <author>
+      <name>Gonzalo</name>
+      <email id="superadmin" domain="email.com" />
+    </author>
+    <time>2025-08-10T04:30:25.203534Z</time>
+    <extensions>
+      <gpxsc:meta expires="false">
+        <gpxsc:id>e22c6b57-212c-4935-b244-0396e2f5cb32</gpxsc:id>
+        <gpxsc:locale>en_US</gpxsc:locale>
+        <gpxsc:behavior>Orienteering</gpxsc:behavior>
+        <gpxsc:version>1</gpxsc:version>
+      </gpxsc:meta>
+    </extensions>
+  </metadata>
+</gpx>
